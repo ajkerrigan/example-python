@@ -3,6 +3,7 @@
 
 from colors import green
 
+
 def say_hello() -> None:
     greeting = "Hello World"
     print(green(greeting))
