@@ -15,3 +15,10 @@ __pycache__/
 # Editors
 .idea/
 *.iml
+
+# Pants workspace files
+/.pants.d/
+/dist/
+/.pids
+/.pants.workdir.file_lock*
+/.pants.rc

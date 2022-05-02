@@ -1,50 +1,7 @@
-# Copyright 2020 Pants project contributors.
-# Licensed under the Apache License, Version 2.0 (see LICENSE).
-
 [GLOBAL]
-pants_version = "2.11.0rc5"
-backend_packages.add = [
-  "pants.backend.python",
-  "pants.backend.python.lint.docformatter",
-  "pants.backend.python.lint.black",
-  "pants.backend.python.lint.flake8",
-  "pants.backend.python.lint.isort",
-  "pants.backend.python.typecheck.mypy",
-]
-
-[anonymous-telemetry]
-enabled = true
-repo_id = "3B1D361B-E9F1-49A8-B761-03DCC41FD58E"
+pants_version = "2.10.0"
 
 [source]
-# The Python source root is the repo root. See https://www.pantsbuild.org/docs/source-roots.
-root_patterns = ["/"]
-
-[python]
-# The default interpreter constraints for code in this repo. Individual targets can override
-#  this with the `interpreter_constraints` field. See
-#  https://www.pantsbuild.org/docs/python-interpreter-compatibility.
-#
-# It's usually a good idea to pin this to a particular version, e.g. `==3.9.*`. We only use a range
-# so that this example works on many different machines.
-#
-# If you use Apple Silicon, set to a value like `>=3.9`.
-interpreter_constraints = [">=3.7"]
-
-# Enable the "resolves" mechanism, which turns on lockfiles for user code. See
-# https://www.pantsbuild.org/docs/python-third-party-dependencies. This also adds the
-# `generate-lockfiles` goal for Pants to generate the lockfile for you, although in some
-# situations you may need to manually generate it, as explained in the docs.
-enable_resolves = true
-resolves = { python-default = "lockfile.txt"}
-
-# Enable using the PEX lockfile format, which provides support for custom indexes, and
-# improves performance for large repositories.
-lockfile_generator = "pex"
-
-[python-bootstrap]
-# We search for interpreters both on the $PATH and in the `$(pyenv root)/versions` folder.
-#  If you're using macOS, you may want to leave off the <PATH> entry to avoid using the
-#  problematic system Pythons. See
-#  https://www.pantsbuild.org/docs/python-interpreter-compatibility#changing-the-interpreter-search-path.
-search_path = ["<PATH>", "<PYENV>"]
+root_patterns = [
+  '/helloworld'
+]
