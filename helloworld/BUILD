@@ -1,6 +1,8 @@
-python_sources()
+python_sources(
+    name="lib"
+)
 
 pex_binary(
-    name="main",
+    name="helloworld",
     entry_point="main.py",
 )
