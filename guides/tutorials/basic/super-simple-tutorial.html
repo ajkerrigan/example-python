@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Simple Tutorial &#8212; Overly Simplistic Guide to Pants</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Adding pants to the super simple tutorial" href="adding-pants-to-super-simple-tutorial.html" />
+    <link rel="prev" title="Introduction" href="../../introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Overly Simplistic Guide to Pants</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Homepage
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Super Simple Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="adding-pants-to-super-simple-tutorial.html">
+   Adding
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pants
+    </span>
+   </code>
+   to the super simple tutorial
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/guides/tutorials/basic/super-simple-tutorial.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-where-to-get-help-if-you-need-help">
+   First: Where to get help if you need help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-python-package">
+   Creating a python package
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-python-executable-pex">
+   Creating a python executable -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .pex
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Super Simple Tutorial</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-where-to-get-help-if-you-need-help">
+   First: Where to get help if you need help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-python-package">
+   Creating a python package
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-python-executable-pex">
+   Creating a python executable -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .pex
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="super-simple-tutorial">
+<h1>Super Simple Tutorial<a class="headerlink" href="#super-simple-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="first-where-to-get-help-if-you-need-help">
+<h2>First: Where to get help if you need help<a class="headerlink" href="#first-where-to-get-help-if-you-need-help" title="Permalink to this headline">¶</a></h2>
+<p>Even simple things can take time and perspective to understand, the pants community is here to help you!</p>
+<p><span class="xref myst">Meet us on our friendly slack channel!</span></p>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Let’s build a project to say hello to the world!</p>
+<p>Note: It is best practice to use a virtual environment.  If you want to setup a virtual environment, but don’t know how - I find this tutorial useful.</p>
+<p>Start by making a project directory and adding the <code class="docutils literal notranslate"><span class="pre">helloworld.py</span></code> file into that directory. Your project should look like this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>myproject
+│   helloworld.py
+
+</pre></div>
+</div>
+<p>The code of a helloworld program is below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+	<span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You should be able to run this program from the command line with the command below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python helloworld.py
+</pre></div>
+</div>
+<p>Hopefully… you are seeing <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>!</p>
+<p>Note: If you are not, please reach out to the slack channel, we would love to help!</p>
+</div>
+<div class="section" id="creating-a-python-package">
+<h2>Creating a python package<a class="headerlink" href="#creating-a-python-package" title="Permalink to this headline">¶</a></h2>
+<p>Next, let’s turn the helloworld module into a python package. We will use setuptools to create a wheel - <code class="docutils literal notranslate"><span class="pre">.whl</span></code> - and tar - <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> - which can be installed into a virtual environment by pip.</p>
+<p>Add a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file into the project directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mypexproject
+│   helloworld.py
+│   setup.py
+
+</pre></div>
+</div>
+<p>The file - <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> - should contain the text below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;helloworld&#39;</span><span class="p">,</span>   <span class="c1"># this is the name of the .whl or .tar.gz file</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.0.1&#39;</span><span class="p">,</span>
+    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;helloworld&#39;</span><span class="p">],</span>  <span class="c1"># this is the location of the helloworld.py module</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;importlib-metadata; python_version &gt;= &quot;3.7&quot;&#39;</span><span class="p">,</span> <span class="c1"># sets the version of python</span>
+    <span class="p">],</span>
+    <span class="n">entry_points</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># the console_script is in the form `command_line_arg=python_function_called` </span>
+    <span class="c1"># and is used to set the command argument to invoke the python program</span>
+        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;helloworld=helloworld:main&#39;</span><span class="p">],</span>  
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Python has a package called <code class="docutils literal notranslate"><span class="pre">build</span></code> which can run this <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file and generate distributions in the <code class="docutils literal notranslate"><span class="pre">dist</span></code> folder.  But first, be sure to have <code class="docutils literal notranslate"><span class="pre">build</span></code> installed.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3 install build
+</pre></div>
+</div>
+<p>Next you can run this command to build your package.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 -m build 
+</pre></div>
+</div>
+<p>Now your project structure should look like this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mypexproject
+│   helloworld.py
+│   setup.py  
+│
+└───dist
+│   │   helloworld-0.0.1-py3-none-any.whl
+│   │   helloworld-0.0.1-py3-none-any.tar.gz
+
+</pre></div>
+</div>
+<p>Great work! On to the next part, creating the python executable file.</p>
+</div>
+<div class="section" id="creating-a-python-executable-pex">
+<h2>Creating a python executable - <code class="docutils literal notranslate"><span class="pre">.pex</span></code><a class="headerlink" href="#creating-a-python-executable-pex" title="Permalink to this headline">¶</a></h2>
+<p>Just like you need the <code class="docutils literal notranslate"><span class="pre">build</span></code> package to build a python package, you need the <code class="docutils literal notranslate"><span class="pre">pex</span></code> project to build a python executable - <code class="docutils literal notranslate"><span class="pre">.pex</span></code> .</p>
+<p>Start by installing the pex package using the command below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3 install pex
+</pre></div>
+</div>
+<p>More information about pex is available in the <a class="reference external" href="https://pex.readthedocs.io/en/v2.1.84/index.html">documentation</a></p>
+<p>Once pex is installed, all you need to do to create a .pex file is to run the command below</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pex . -c helloworld --output<span class="o">=</span>helloworld.pex
+</pre></div>
+</div>
+<p>Pex looks for the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> in the directory and creates the output file <code class="docutils literal notranslate"><span class="pre">helloworld.pex</span></code>.</p>
+<p>Finally your project structure should look like this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mypexproject
+│   helloworld.py
+│   setup.py  
+│   helloworld.pex 
+│
+└───dist
+│   │   helloworld-0.0.1-py3-none-any.whl
+│   │   helloworld-0.0.1-py3-none-any.tar.gz
+
+</pre></div>
+</div>
+<p>First, make sure it worked by running <code class="docutils literal notranslate"><span class="pre">helloworld.pex</span></code> using this command.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./helloworld.pex
+</pre></div>
+</div>
+<p>Now you can run <code class="docutils literal notranslate"><span class="pre">helloworld.pex</span></code>. The only file you need to give to another person to run your <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> program is the <code class="docutils literal notranslate"><span class="pre">helloworld.pex</span></code>. The magic of an executable file is that it can easily be shared!</p>
+<p>You can run it, but can your friend run <code class="docutils literal notranslate"><span class="pre">helloworld.pex</span></code>?
+Send it to your friend and let them try to run it today!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./guides/tutorials/basic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="adding-pants-to-super-simple-tutorial.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Adding <code class="docutils literal notranslate"><span class="pre">pants</span></code> to the super simple tutorial</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Phebe Polk<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
