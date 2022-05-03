@@ -1,4 +1,4 @@
-# Adding `pants` to a the super simple tutorial
+# Adding `pants` to the super simple tutorial
 
 
 ## Starting place
