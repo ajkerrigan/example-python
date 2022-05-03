@@ -26,12 +26,18 @@ Pants is a suite of tools for creating and evaluating your new executable files.
 
 If the `pex` package is a knife, then `pants` is the kitchen.
 
-Imagine someone sent you only a `.pex` file. You want to know, is the python code formatted properly? Are there tests? Do the tests pass? Will this executable do the thing that you want it to do?  Pants lets you run linters like black, run testers like pytest, and many more things.
+Imagine someone sent you only a `.pex` file. You would want to know, is the python code formatted properly? Are there tests? Do the tests pass? Will this executable do the thing that you want it to do?  Pants lets you run linters like black, run testers like pytest, and many more things.
 
 ### Let's add a test to `helloworld`
 
-It's not that complicated, but we still want to know if our `helloworld` project actually works.
+It's not that complicated, but we still want to know if our `helloworld` project actually works. First, let's install pytest.
 
+```shell
+pip3 install pytest
+
+```
+
+Now we can add a test file - `test_helloworld.py` - which contains our test.
 
 ##### test_helloworld.py
 ```python
@@ -44,6 +50,13 @@ def test_main(capsys):
 ```
 
 Note: If you have questions about this test, please read the [pytest documentation.](https://docs.pytest.org/en/6.2.x/capture.html#accessing-captured-output-from-a-test-function)
+
+
+Finally, we can run our test using pytest.
+
+```shell
+pytest .
+```
 
 
 Your project should now look like this.
@@ -105,21 +118,22 @@ backend_packages = [
 ```
 
 
+Your project should now look like this.
 
 ```
 mypexproject
+│   .gitignore
 │   helloworld.py
 │   test_helloworld.py
 │   setup.py  
 │   helloworld.pex 
+│   pants.toml
 │
 └───dist
 │   │   helloworld-0.0.1-py3-none-any.whl
 │   │   helloworld-0.0.1-py3-none-any.tar.gz
 
 ```
-
-
 
 ### Install `pants`
 
@@ -147,4 +161,41 @@ mypexproject
 
 ```
 
+### Using `pants` to build your `.pex`
 
+#### Tailoring the pants
+
+In order to create your `.pex` file, `pants` needs more information about your local environment and directory structure.  This "tailoring" of the build is done using the `tailor` command below.
+
+```shell
+./pants tailor
+```
+
+The information `pants` needs is stored in the new file `BUILD`.
+
+Check that your project now looks like this!
+
+```
+mypexproject
+│   .gitignore
+│   BUILD
+│   helloworld.py
+│   test_helloworld.py
+│   setup.py  
+│   helloworld.pex 
+│   pants.toml
+│   pants
+│
+└───dist
+│   │   helloworld-0.0.1-py3-none-any.whl
+│   │   helloworld-0.0.1-py3-none-any.tar.gz
+
+```
+
+
+### Using `pants` to run you tests on your `.pex`
+
+
+```shell
+./pants test helloword::
+```

@@ -6,10 +6,6 @@ parts:
       - file: guides/introduction
       - file: guides/tutorials/basic/super-simple-tutorial
       - file: guides/tutorials/basic/adding-pants-to-super-simple-tutorial       
-      - file: guides/tutorials/advanced/basic-setuptools-to-pex
-      - file: guides/tutorials/advanced/adding-pants-to-basic-setuptools-to-pex
-      - file: guides/tutorials/advanced/basic-pyproject-to-pex
-      - file: guides/tutorials/advanced/adding-pants-to-basic-pyproject-to-pex
   # - caption: API Reference
   #   chapters:
   #     - glob: api/*
