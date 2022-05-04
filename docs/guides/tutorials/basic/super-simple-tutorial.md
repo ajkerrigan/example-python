@@ -12,7 +12,7 @@ Even simple things can take time and perspective to understand, the pants commun
 Let's build a project to say hello to the world!
 
 :::{tip}
-Note: It is best practice to use a virtual environment.  If you want to setup a virtual environment, but don't know how - I find this tutorial useful.
+Note: It is best practice to use a virtual environment.  If you want to setup a virtual environment, but don't know how - I find [this tutorial useful](https://realpython.com/lessons/creating-virtual-environment/).
 :::
 
 Start by making a project directory and adding the `helloworld.py` file into that directory. Your project should look like this.
@@ -43,7 +43,7 @@ python helloworld.py
 Hopefully... you are seeing `hello world`! 
 
 :::{tip}
-Note: If you are not, please reach out to the slack channel, we would love to help!
+Note: If you are not, please reach out to the [slack channel](https://join.slack.com/t/pantsbuild/shared_invite/zt-d0uh0mok-RLvVosDiX6JDpvStH~bFBA), we would love to help!
 :::
 
 ### Creating a python package
