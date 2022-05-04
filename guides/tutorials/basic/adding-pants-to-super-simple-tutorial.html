@@ -306,18 +306,41 @@
       <a class="reference internal nav-link" href="#tailoring-the-pants">
        Tailoring the pants
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#build">
+         BUILD
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-pants-to-run-you-tests-on-your-pex">
+    <a class="reference internal nav-link" href="#using-pants-to-run-your-tests-on-your-pex">
      Using
      <code class="docutils literal notranslate">
       <span class="pre">
        pants
       </span>
      </code>
-     to run you tests on your
+     to run your tests on your
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .pex
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pants-to-generate-your-pex">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pants
+      </span>
+     </code>
+     to generate your
      <code class="docutils literal notranslate">
       <span class="pre">
        .pex
@@ -462,18 +485,41 @@
       <a class="reference internal nav-link" href="#tailoring-the-pants">
        Tailoring the pants
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#build">
+         BUILD
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-pants-to-run-you-tests-on-your-pex">
+    <a class="reference internal nav-link" href="#using-pants-to-run-your-tests-on-your-pex">
      Using
      <code class="docutils literal notranslate">
       <span class="pre">
        pants
       </span>
      </code>
-     to run you tests on your
+     to run your tests on your
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .pex
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pants-to-generate-your-pex">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pants
+      </span>
+     </code>
+     to generate your
      <code class="docutils literal notranslate">
       <span class="pre">
        .pex
@@ -641,8 +687,24 @@ backend_packages = [
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./pants tailor
 </pre></div>
 </div>
-<p>The information <code class="docutils literal notranslate"><span class="pre">pants</span></code> needs is stored in the new file <code class="docutils literal notranslate"><span class="pre">BUILD</span></code>.</p>
-<p>Check that your project now looks like this!</p>
+<p>The information <code class="docutils literal notranslate"><span class="pre">pants</span></code> needs is stored in the new file <code class="docutils literal notranslate"><span class="pre">BUILD</span></code>. Your file should look approximately like this.</p>
+<div class="section" id="build">
+<h5>BUILD<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pex_binary</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;helloworld0&quot;</span><span class="p">,</span>
+    <span class="n">entry_point</span><span class="o">=</span><span class="s2">&quot;helloworld.py&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">python_sources</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">python_tests</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tests0&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Check that your project structure now looks like this!</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mypexproject
 │   .gitignore
 │   BUILD
@@ -661,9 +723,66 @@ backend_packages = [
 </div>
 </div>
 </div>
-<div class="section" id="using-pants-to-run-you-tests-on-your-pex">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">pants</span></code> to run you tests on your <code class="docutils literal notranslate"><span class="pre">.pex</span></code><a class="headerlink" href="#using-pants-to-run-you-tests-on-your-pex" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./pants <span class="nb">test</span> helloword::
+</div>
+<div class="section" id="using-pants-to-run-your-tests-on-your-pex">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">pants</span></code> to run your tests on your <code class="docutils literal notranslate"><span class="pre">.pex</span></code><a class="headerlink" href="#using-pants-to-run-your-tests-on-your-pex" title="Permalink to this headline">¶</a></h3>
+<p>Here we can show you multiple ways of using <code class="docutils literal notranslate"><span class="pre">pants</span></code> to run your tests.</p>
+<p>The first is the most straightforward.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./pants <span class="nb">test</span> test_helloworld.py
+</pre></div>
+</div>
+<p>This runs pytest on the file <code class="docutils literal notranslate"><span class="pre">test_helloworld.py</span></code>.  But what if you had more than one test file?</p>
+<p>Then you could use the command below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./pants <span class="nb">test</span> ::
+</pre></div>
+</div>
+<p>The double colons indicate a directory structure. Plain <code class="docutils literal notranslate"><span class="pre">::</span></code> indicates the current directory.  If you put all the tests into a folder called <code class="docutils literal notranslate"><span class="pre">tests</span></code> then the command would be <code class="docutils literal notranslate"><span class="pre">./pants</span> <span class="pre">test</span> <span class="pre">tests::</span></code>. For pants, just replace slashes with <code class="docutils literal notranslate"><span class="pre">::</span></code>.</p>
+<p>Finally, let’s look at that build file again.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">python_tests</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tests0&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The build file has a command <code class="docutils literal notranslate"><span class="pre">python_tests</span></code>.  This command has a <code class="docutils literal notranslate"><span class="pre">name</span></code> keyword that is assigned to the value <code class="docutils literal notranslate"><span class="pre">test0</span></code>.  This name can be used by pants to call the tests.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./pants <span class="nb">test</span> :tests0
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-pants-to-generate-your-pex">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">pants</span></code> to generate your <code class="docutils literal notranslate"><span class="pre">.pex</span></code><a class="headerlink" href="#using-pants-to-generate-your-pex" title="Permalink to this headline">¶</a></h3>
+<p>Now that you understand the <code class="docutils literal notranslate"><span class="pre">pants</span></code> syntax a little better, you can use it to generate the <code class="docutils literal notranslate"><span class="pre">.pex</span></code> file.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./pants package ::
+</pre></div>
+</div>
+<p>If the command ran properly, the console should look like this.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; ./pants package ::
+<span class="m">20</span>:42:00.28 <span class="o">[</span>INFO<span class="o">]</span> Completed: Building helloworld0.pex
+<span class="m">20</span>:42:00.28 <span class="o">[</span>INFO<span class="o">]</span> Wrote dist/helloworld0.pex
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.pex</span></code> will be in your <code class="docutils literal notranslate"><span class="pre">dist</span></code> file alongside the <code class="docutils literal notranslate"><span class="pre">.whl</span></code> and <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code> files.</p>
+<p>Check that the directory now looks like this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mypexproject
+│   .gitignore
+│   BUILD
+│   helloworld.py
+│   test_helloworld.py
+│   setup.py  
+│   helloworld.pex 
+│   pants.toml
+│   pants
+│
+└───dist
+│   │   helloworld-0.0.1-py3-none-any.whl
+│   │   helloworld-0.0.1-py3-none-any.tar.gz
+│   │   helloworld0.pex
+
+</pre></div>
+</div>
+<p>And that the new <code class="docutils literal notranslate"><span class="pre">.pex</span></code> file can be run like this.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; ./dist/helloworld0.pex
+hello world
 </pre></div>
 </div>
 </div>

@@ -171,9 +171,25 @@ In order to create your `.pex` file, `pants` needs more information about your l
 ./pants tailor
 ```
 
-The information `pants` needs is stored in the new file `BUILD`.
+The information `pants` needs is stored in the new file `BUILD`. Your file should look approximately like this.
 
-Check that your project now looks like this!
+##### BUILD
+```python
+pex_binary(
+    name="helloworld0",
+    entry_point="helloworld.py",
+)
+
+python_sources(
+    name="root",
+)
+
+python_tests(
+    name="tests0",
+)
+```
+
+Check that your project structure now looks like this!
 
 ```
 mypexproject
@@ -193,9 +209,83 @@ mypexproject
 ```
 
 
-### Using `pants` to run you tests on your `.pex`
+### Using `pants` to run your tests on your `.pex`
 
+Here we can show you multiple ways of using `pants` to run your tests.
+
+The first is the most straightforward.
 
 ```shell
-./pants test helloword::
+./pants test test_helloworld.py
+```
+
+This runs pytest on the file `test_helloworld.py`.  But what if you had more than one test file?
+
+Then you could use the command below.
+
+```shell
+./pants test ::
+```
+
+The double colons indicate a directory structure. Plain `::` indicates the current directory.  If you put all the tests into a folder called `tests` then the command would be `./pants test tests::`. For pants, just replace slashes with `::`.
+
+
+
+Finally, let's look at that build file again.
+
+```python
+...
+python_tests(
+    name="tests0",
+)
+```
+
+
+The build file has a command `python_tests`.  This command has a `name` keyword that is assigned to the value `test0`.  This name can be used by pants to call the tests.
+
+```shell script
+./pants test :tests0
+```
+###  Using `pants` to generate your `.pex`
+
+Now that you understand the `pants` syntax a little better, you can use it to generate the `.pex` file.
+
+```shell script
+./pants package ::
+```
+
+If the command ran properly, the console should look like this.
+
+```shell
+>>> ./pants package ::
+20:42:00.28 [INFO] Completed: Building helloworld0.pex
+20:42:00.28 [INFO] Wrote dist/helloworld0.pex
+```
+The `.pex` will be in your `dist` file alongside the `.whl` and `tar.gz` files.
+
+Check that the directory now looks like this.
+
+```
+mypexproject
+│   .gitignore
+│   BUILD
+│   helloworld.py
+│   test_helloworld.py
+│   setup.py  
+│   helloworld.pex 
+│   pants.toml
+│   pants
+│
+└───dist
+│   │   helloworld-0.0.1-py3-none-any.whl
+│   │   helloworld-0.0.1-py3-none-any.tar.gz
+│   │   helloworld0.pex
+
+```
+
+And that the new `.pex` file can be run like this.
+
+```shell
+>>> ./dist/helloworld0.pex
+hello world
 ```
