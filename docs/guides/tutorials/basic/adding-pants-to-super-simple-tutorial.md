@@ -48,9 +48,9 @@ def test_main(capsys):
     assert "hello world" in captured.out
 
 ```
-
+:::{tip}
 Note: If you have questions about this test, please read the [pytest documentation.](https://docs.pytest.org/en/6.2.x/capture.html#accessing-captured-output-from-a-test-function)
-
+:::
 
 Finally, we can run our test using pytest.
 
@@ -160,6 +160,13 @@ mypexproject
 │   │   helloworld-0.0.1-py3-none-any.tar.gz
 
 ```
+:::{tip}
+Note: Pants has very useful help commands built in. You can access them with the basic `help` or `--help` flags.
+
+```shell
+./pants help
+```
+:::
 
 ### Using `pants` to build your `.pex`
 
