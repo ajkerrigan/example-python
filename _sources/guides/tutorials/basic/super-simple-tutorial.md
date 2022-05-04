@@ -11,7 +11,9 @@ Even simple things can take time and perspective to understand, the pants commun
 
 Let's build a project to say hello to the world!
 
+:::{tip}
 Note: It is best practice to use a virtual environment.  If you want to setup a virtual environment, but don't know how - I find this tutorial useful.
+:::
 
 Start by making a project directory and adding the `helloworld.py` file into that directory. Your project should look like this.
 
@@ -40,8 +42,9 @@ python helloworld.py
 
 Hopefully... you are seeing `hello world`! 
 
+:::{tip}
 Note: If you are not, please reach out to the slack channel, we would love to help!
-
+:::
 
 ### Creating a python package
 
