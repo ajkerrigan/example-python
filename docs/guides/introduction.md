@@ -22,7 +22,7 @@ huh?
 
 ### What is an executable file?
 
-An executable file is a file that traditionally ends in ".exe" which the computer has permissions to run [`chmod -x file.exe`]. An executable file (they have also been called applications) can be placed into a computers system source or applications directory and run from the command line.
+An executable file is a file traditionally ends in ".exe" on Windows or has execution permissions set in Mac/Linux systems [`chmod +x file.exe`]. An executable file (they have also been called applications) can be placed into a computers system source or applications directory and run from the command line.
 
 Executable files are special because they include information about the interpreter and interpreter environment inside the file.  This means that there is no need to setup an environment to run the executable. The executable should already contain the environment information.
 
