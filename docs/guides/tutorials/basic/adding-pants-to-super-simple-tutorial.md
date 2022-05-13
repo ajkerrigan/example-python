@@ -43,10 +43,9 @@ Now we can add a test file - `test_helloworld.py` - which contains our test.
 ```python
 from helloworld import main
 def test_main(capsys):
-	main()
-	captured = capsys.readouterr()
+    main()
+    captured = capsys.readouterr()
     assert "hello world" in captured.out
-
 ```
 :::{tip}
 Note: If you have questions about this test, please read the [pytest documentation.](https://docs.pytest.org/en/6.2.x/capture.html#accessing-captured-output-from-a-test-function)

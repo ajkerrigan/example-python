@@ -19,7 +19,7 @@ Start by making a project directory and adding the `helloworld.py` file into tha
 
 
 ```
-myproject
+mypexproject
 │   helloworld.py
 
 ```
